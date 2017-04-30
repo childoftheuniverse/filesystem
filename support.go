@@ -110,6 +110,18 @@ func GetImplementation(fileurl *url.URL) FileSystem {
 }
 
 /*
+Determine whether a handler is registered for the given schema. Returns true if
+an implementation was registered for the specified scheme.
+*/
+func HasImplementation(scheme string) bool {
+	var found bool
+
+	_, found = registeredFileSystems[scheme]
+
+	return found
+}
+
+/*
 OpenReader opens the referenced file and returns a ReadCloser object which
 can be used to access the files contents.
 */
