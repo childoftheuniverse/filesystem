@@ -84,3 +84,11 @@ io.WriteCloser compatible API.
 func ToIoWriteCloser(wc WriteCloser) io.WriteCloser {
 	return &ioCompatWriteCloser{writeCloser: wc}
 }
+
+/*
+Seeker is a context-aware variant of the good old io.Seeker.
+*/
+type Seeker interface {
+	Tell(context.Context) (int64, error)
+	Seek(context.Context, int64, int) (int64, error)
+}
