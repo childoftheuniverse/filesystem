@@ -1,8 +1,8 @@
 package filesystem
 
 import (
+	"context"
 	"errors"
-	"golang.org/x/net/context"
 	"net/url"
 )
 
