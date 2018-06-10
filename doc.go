@@ -1,7 +1,7 @@
 /*
-filesystem provides an abstraction API for hooking up various file system
-implementations and use them more or less transparently through URLs and a
-common API.
+Package filesystem provides an abstraction API for hooking up various file
+system implementations and use them more or less transparently through URLs
+and a common API.
 
 In this API, the scheme part of the URL (see net/url for a description of what
 makes up an URL) is used to find the correct file system implementation. The
